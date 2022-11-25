@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .required {
+            color: red;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="booking-form">
+        <h1>Booking Form</h1>
+
+        <form action="/pos.php" method="post" name="booking" enctype="multipart/form-data" >
+            <ul>
+                <li>
+                    <label><span class="required">*</span>Fullname <br />
+
+                        <input type="text" name="Fullname" value="" required="" placeholder="jhon" />
+                    </label>
+                </li>
+
+                <li>
+                    <label for="gender"><span class="required">*</span>Gender:</label>
+                    <input type="radio" value="Male" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" value="Female" name="gender" id="Female">
+                    <label for="Female">Female</label>
+                    <input type="radio" value="Other" name="gender" id="Other">
+                    <label for="other">Other</label>
+                </li>
+
+
+
+                <li>
+                    <label><span class="required">*</span>Address:</br><input type="text" name="address" value=""
+                            required="" placeholder="santinagar" /></label>
+
+                </li>
+                <li>
+                    <label><span class="required">*</span> Phone_Number:</br><input type="phone" name="phone" value=""
+                            required="" placeholder="98387273232" /> </label>
+
+                </li>
+
+                <li>
+                    <label for="email"><span class="required">*</span>Email :</br></label>
+                    <input type="email" name="email" value="" id="email" required="" placeholder="info@gmail.com" />
+                </li>
+
+                <li>
+
+                    <h4>Choose Seevices</h4>
+                    <input type="checkbox" name="services" value="hotel" id="hotel" />
+                    <label for="hotel">Hotel:</label>
+                    <input type="checkbox" name="service" value="Vehicle" id="Vehicle"/>
+                    <label for="Vehicle">Vehicle</label>
+                    <input type="checkbox" name="service" value="Air-ticket" id="air-ticket"/>
+                    <label for="air-ticket">Air-ticket</label>
+                </li>
+               <li>
+                    <label for="message">Message:</br></label>
+                    <textarea name="message " type="message" cols="30" rows="10" id="message"></textarea>
+                </li>
+                <li>
+                    <label for="type">Type:</label>
+                    <select name="customer_type" id="type"> //multiple is a attribute used for multiple selction of data
+                        in option section
+                        <option>Choose customer Type</option>
+                        <option value="basic">Basic</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                </li>
+                <!-- <li>
+
+
+                    <label for="file">
+                        <input type="file" name="photo" id="photo">
+                    </label>
+                </li> -->
+            </ul>
+            <div class="footer">
+                <input type="submit" value="send" name="submit" />
+                <input type="reset" value="reset-form" name="reset" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
